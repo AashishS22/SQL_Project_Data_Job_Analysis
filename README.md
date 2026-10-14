@@ -9,7 +9,7 @@ Driven by a quest to navigate the data analyst job market mroe effectively, this
 ### Questions i wanted to answer through my SQl queries were:
 1. What are top-paying data analyst jopbs?
 2. What skills are required for these top-paying jobs.
-3.What skills are most in demand for data analysts?
+3. What skills are most in demand for data analysts?
 4. Whcih skills are associated with higher salaries?
 5. What are most optimal skills to learn?
 
