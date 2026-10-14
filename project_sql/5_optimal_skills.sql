@@ -8,9 +8,9 @@ with skills_demand as (
         on s.skill_id = d.skill_id
     inner join job_postings_fact f
         on d.job_id = f.job_id
-    where job_title_short = 'Data Engineer'
-    AND salary_year_avg is not null
-    And job_work_from_home = True
+    where job_title_short = 'Data Analyst'
+        AND salary_year_avg is not null
+        And job_work_from_home = True
     Group by s.skill_id
  
 ),
@@ -24,8 +24,8 @@ average_salary as (
         on s.skill_id = d.skill_id
     inner join job_postings_fact f
         on d.job_id = f.job_id
-    where job_title_short = 'Data Engineer'
-    AND f.salary_year_avg is not null
+    where job_title_short = 'Data Analyst'
+        AND f.salary_year_avg is not null
     Group by s.skill_id
    
 )
@@ -36,7 +36,7 @@ select
     average_salary.avg_salary
 from skills_demand
 inner join average_salary
-on skills_demand.skill_id = average_salary.skill_id
+    on skills_demand.skill_id = average_salary.skill_id
 order by  avg_salary desc,
         job_counts Desc
        
